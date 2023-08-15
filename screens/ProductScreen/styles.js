@@ -1,0 +1,117 @@
+import {StyleSheet, Dimensions} from 'react-native'
+const { height, width } = Dimensions.get('window');
+
+export default styles = (isDarkMode) => StyleSheet.create({
+    wrapper: {
+        flex: 1,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        backgroundColor: isDarkMode ? "#3b3b3b" : '#FCFCFC',
+    },
+    
+    imgContainer: {
+        width: '100%',
+        height: '45%',
+        backgroundColor: isDarkMode ? "#2e2e2e" : '#F1F1F1',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 6,  
+        overflow: 'hidden',
+    },
+    img: {
+        width: '100%',
+        height: '100%',
+        // aspectRatio: '1 / 2',
+    },
+    bottomContainer: {
+        width: '100%',
+        height: '45%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+    },
+    descContainer: {
+        width: "80%",
+        marginHorizontal: '10%',
+        paddingVertical: 20,
+        height: "30%",
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        
+    },
+    title: {
+        fontWeight: 700,
+        fontSize: width > 700 ? 28 : 24,
+        color: isDarkMode ? "#fff" : "#000",
+    },
+    description: {
+        fontSize: 16,
+        marginTop: 6,
+        color: "#8E8E8E",
+    },
+    amountContainer: {
+        width: '60%',
+        height: "50%",
+        marginHorizontal: '20%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    minusIcon: {
+        width: 40,
+        height: 40,
+        borderRadius: 10,
+        display: 'flex',
+        flexDirection: "column",
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        borderStyle: 'solid',
+        borderWidth: 3,
+    },
+    plusIcon: {
+        width: 40,
+        aspectRatio: '1 / 1',
+        borderRadius: 10,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+    },
+    amount: {
+        fontWeight: 700,
+        fontSize: 24,
+        color: isDarkMode ? "#fff" : "#000",
+    },
+    buyContainer: {
+        width: '80%',
+        marginHorizontal: '10%',
+        height: '20%',
+        paddingBottom: 20,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    cost: {
+        fontWeight: 700,
+        fontSize: 28,
+        color: "#34A3CF",
+    },
+    buyBtn: {
+        width: '50%',
+        height: "100%",
+        borderRadius: 10,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buyBtnTxt: {
+        fontSize: 24,
+        textAlign: 'center',
+        color: 'white',
+    },
+})
